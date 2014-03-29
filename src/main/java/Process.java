@@ -58,7 +58,7 @@ public class Process implements Serializable {
 			FacesContext.getCurrentInstance().addMessage("auth", msg);
 			return "";
 		}
-		int amot = Integer.parseInt(amount);
+		long amot = Long.parseLong(amount);
 		if (selectedCart.getMember().getBakiye() < amot) {
 			FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_ERROR,
 					App.getResourceBundleString("notEnoughPoint"), "");
